@@ -4,4 +4,4 @@ matplotlib
 dvc
 dvc-gdrive
 dvclive
-pyyaml
+nvidia-ml-py  
