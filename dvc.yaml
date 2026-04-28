@@ -5,6 +5,7 @@ stages:
     - src/model.py
     - params.yaml
     - train/train.csv
+    - test/test.csv
     outs:
     - models/model.keras
     - artifacts/X_test_cnn.npy

@@ -9,8 +9,12 @@ stages:
       size: 1730
     - path: src/model.py
       hash: md5
-      md5: b12848617955895c98837755449fdeda
-      size: 11993
+      md5: fdb040d59c8a72c054e53aec6a3ebddc
+      size: 12052
+    - path: test/test.csv
+      hash: md5
+      md5: a3dc7d3471ad115369678efab4513c3e
+      size: 3194261
     - path: train/train.csv
       hash: md5
       md5: 3b57b9f5453db738f68443269a554b01
@@ -26,25 +30,21 @@ stages:
       size: 4633
     - path: artifacts/training_history.json
       hash: md5
-      md5: eb46eb530e7066ac5b3fa41ef3f9974d
-      size: 3410
+      md5: 6f94833a5652f4da537a574023ae75a5
+      size: 2898
     - path: artifacts/y_test.npy
       hash: md5
       md5: 8244ab2057d810c6c1e6b5e37e26f884
       size: 10232
     - path: dvclive/
       hash: md5
-      md5: 5b3e0242631f57dc038d80fc2c42a2f8.dir
-      size: 23616
-      nfiles: 4
-    - path: model_results.png
-      hash: md5
-      md5: d3cf39d96ba8d30efd8bdea7302e5918
-      size: 47365
+      md5: 3f534c2df5682c1bd867f0c2e77488e7.dir
+      size: 24132
+      nfiles: 9
     - path: models/model.keras
       hash: md5
-      md5: af46c599da573ad6db8c42bea1183ae9
-      size: 18463
+      md5: 995b7e609b4ecd682bf5a1a6b8b9d068
+      size: 9999711
   evaluate:
     cmd: python src/evaluate.py
     deps:
@@ -58,16 +58,16 @@ stages:
       size: 4633
     - path: artifacts/training_history.json
       hash: md5
-      md5: eb46eb530e7066ac5b3fa41ef3f9974d
-      size: 3410
+      md5: 6f94833a5652f4da537a574023ae75a5
+      size: 2898
     - path: artifacts/y_test.npy
       hash: md5
       md5: 8244ab2057d810c6c1e6b5e37e26f884
       size: 10232
     - path: models/model.keras
       hash: md5
-      md5: af46c599da573ad6db8c42bea1183ae9
-      size: 18463
+      md5: 995b7e609b4ecd682bf5a1a6b8b9d068
+      size: 9999711
     - path: params.yaml
       hash: md5
       md5: 95e3b08aa14225916283928cba887de4
@@ -83,5 +83,5 @@ stages:
     outs:
     - path: metrics.json
       hash: md5
-      md5: 00e7e1c8af557d3980925017ba3a34a0
-      size: 39
+      md5: ab9822d2b49e369a5db3ffb485fec14a
+      size: 616

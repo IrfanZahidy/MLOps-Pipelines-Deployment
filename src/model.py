@@ -49,10 +49,12 @@ print("STARTING CNN REGRESSION MODEL — TRAINING")
 print("=" * 50)
 
 # ── Load data ──────────────────────────────────────────────
-if not os.path.exists("train/train.csv"):
-    print("ERROR: train/train.csv not found!")
-    print("CWD:", os.getcwd(), "  Files:", os.listdir('.'))
-    sys.exit(1)
+for path in ["train/train.csv", "test/test.csv"]:
+    if not os.path.exists(path):
+        print(f"ERROR: {path} not found!")
+        print("CWD:", os.getcwd())
+        print("Files:", os.listdir('.'))
+        sys.exit(1)
 
 print("\nLoading data...")
 data  = pd.read_csv("train/train.csv")

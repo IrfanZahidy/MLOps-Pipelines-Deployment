@@ -1,4 +1,20 @@
 {
-  "mae": 18.3787,
-  "mse": 354.0312
+    "timestamp": "2026-04-28T22:38:17.357589",
+    "model_type": "1D CNN",
+    "test_size": 0.3,
+    "batch_size": 32,
+    "epochs": 100,
+    "final_epoch": 16,
+    "metrics": {
+        "mean_squared_error": 100.71824396494887,
+        "root_mean_squared_error": 10.03584794449123,
+        "mean_absolute_error": 6.333950079572834,
+        "r2_score": 0.4366267956563009
+    },
+    "training_history": {
+        "final_train_loss": 124.22135925292969,
+        "final_val_loss": 233.07830810546875,
+        "final_train_r2": -63.839290618896484,
+        "final_val_r2": -75.00370788574219
+    }
 }
