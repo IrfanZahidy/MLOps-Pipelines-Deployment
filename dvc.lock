@@ -5,48 +5,48 @@ stages:
     deps:
     - path: params.yaml
       hash: md5
-      md5: 89388575b46d4f9cd78c6962d143741a
-      size: 169
+      md5: 58c74ecd84670634f82438ef913d2454
+      size: 158
     - path: src/model.py
       hash: md5
-      md5: 59f6b050b05a9123b14aa11b028c0901
-      size: 3081
+      md5: 4b6b1bf7584db184297a1c092414fefd
+      size: 2959
     params:
       params.yaml:
         data.random_seed: 42
         data.train_split: 0.8
         model.dense_units: 10
-        model.epochs: 10
+        model.epochs: 100
         model.learning_rate: 0.01
     outs:
     - path: dvclive/
       hash: md5
-      md5: 1ec6981bee88b55bf464d11bd12240d8.dir
-      size: 23857
+      md5: 5b3e0242631f57dc038d80fc2c42a2f8.dir
+      size: 23616
       nfiles: 4
     - path: model_results.png
       hash: md5
-      md5: 1f2800e7c8622e01f8e43f40f5b676aa
-      size: 41688
+      md5: d3cf39d96ba8d30efd8bdea7302e5918
+      size: 47365
     - path: models/model.keras
       hash: md5
-      md5: 14c0703ddd11b4e83f30a262b058becd
-      size: 18459
+      md5: af46c599da573ad6db8c42bea1183ae9
+      size: 18463
   evaluate:
     cmd: python src/evaluate.py
     deps:
     - path: models/model.keras
       hash: md5
-      md5: 14c0703ddd11b4e83f30a262b058becd
-      size: 18459
+      md5: af46c599da573ad6db8c42bea1183ae9
+      size: 18463
     - path: params.yaml
       hash: md5
-      md5: 89388575b46d4f9cd78c6962d143741a
-      size: 169
+      md5: 58c74ecd84670634f82438ef913d2454
+      size: 158
     - path: src/evaluate.py
       hash: md5
-      md5: e8fbcc621876621f176d164bc8b67ac1
-      size: 1474
+      md5: 6348d7812741ea6433177e7a32fb276d
+      size: 1438
     params:
       params.yaml:
         data.train_split: 0.8
@@ -54,5 +54,5 @@ stages:
     outs:
     - path: metrics.json
       hash: md5
-      md5: 52bd9858993a841870455c7bef736855
-      size: 42
+      md5: 00e7e1c8af557d3980925017ba3a34a0
+      size: 39
