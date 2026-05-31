@@ -1,7 +1,7 @@
 schema: '2.0'
 stages:
   train:
-    cmd: python src/model.py
+    cmd: python3 src/model.py
     deps:
     - path: params.yaml
       hash: md5
@@ -30,18 +30,18 @@ stages:
       size: 4268
     - path: artifacts/training_history.json
       hash: md5
-      md5: a42b12194817a4116169bfc0da3bcd97
-      size: 1805
+      md5: 5354490fa5a86af7e4eb010c3defefa8
+      size: 1793
     - path: artifacts/y_test.npy
       hash: md5
       md5: 8244ab2057d810c6c1e6b5e37e26f884
       size: 10232
     - path: models/model.keras
       hash: md5
-      md5: 0beab032d4f98e0c6a2ed0ae7e7fa02c
-      size: 9999737
+      md5: 767d4f289659ad730d542c0339a8192a
+      size: 9999672
   evaluate:
-    cmd: python src/evaluate.py
+    cmd: python3 src/evaluate.py
     deps:
     - path: artifacts/X_test_cnn.npy
       hash: md5
@@ -53,16 +53,16 @@ stages:
       size: 4268
     - path: artifacts/training_history.json
       hash: md5
-      md5: a42b12194817a4116169bfc0da3bcd97
-      size: 1805
+      md5: 5354490fa5a86af7e4eb010c3defefa8
+      size: 1793
     - path: artifacts/y_test.npy
       hash: md5
       md5: 8244ab2057d810c6c1e6b5e37e26f884
       size: 10232
     - path: models/model.keras
       hash: md5
-      md5: 0beab032d4f98e0c6a2ed0ae7e7fa02c
-      size: 9999737
+      md5: 767d4f289659ad730d542c0339a8192a
+      size: 9999672
     - path: params.yaml
       hash: md5
       md5: 9d84324d340384ef51a0156d90a1b125
@@ -78,5 +78,5 @@ stages:
     outs:
     - path: metrics.json
       hash: md5
-      md5: 0327d1ca4faf3458804561fb05325215
+      md5: dc9f6b24cc23f0b32090f57ca9141fb0
       size: 598

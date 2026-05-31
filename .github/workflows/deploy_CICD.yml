@@ -59,7 +59,7 @@ jobs:
         #   # Adjust this block to match whichever remote you chose in Step 4
         
       # ── Only pull input data, not model outputs ───────────────
-      - name: Pull input data
+      - name: Pull all data
         run: dvc pull --allow-missing
         
       - name: Run pipeline to generate metrics and live files

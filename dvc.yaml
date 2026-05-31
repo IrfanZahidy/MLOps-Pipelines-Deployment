@@ -1,6 +1,6 @@
 stages:
   train:
-    cmd: python src/model.py # train the model and save outputs
+    cmd: python3 src/model.py # train the model and save outputs
     deps: # dependencies for this stage
     - src/model.py
     - params.yaml
@@ -14,7 +14,7 @@ stages:
     - artifacts/feature_columns.json
 
   evaluate: # evaluate the model on test set and save metrics/plots
-    cmd: python src/evaluate.py # evaluate the model and save metrics/plots
+    cmd: python3 src/evaluate.py # evaluate the model and save metrics/plots
     deps: # dependencies for this stage
     - src/evaluate.py
     - models/model.keras

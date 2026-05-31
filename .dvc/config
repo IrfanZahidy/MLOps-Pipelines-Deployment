@@ -1,0 +1,5 @@
+[core]
+    remote = origin
+['remote "origin"']
+    url = https://dagshub.com/IrfanZahidy/deployment-data-COS40007.dvc
+    ssl_verify = false
